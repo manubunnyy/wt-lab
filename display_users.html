@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Users</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer>
+      document.addEventListener("DOMContentLoaded", function () {
+        const usersTable = document.getElementById("usersTable");
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+
+        if (users.length === 0) {
+          usersTable.innerHTML = "<tr><td colspan='7'>No users registered.</td></tr>";
+          return;
+        }
+
+        // Create table header
+        let header = `<tr>
+          <th>Full Name</th>
+          <th>Email</th>
+          <th>Age</th>
+          <th>Birthday</th>
+          <th>Gender</th>
+          <th>Phone</th>
+          <th>Username</th>
+        </tr>`;
+        let rows = "";
+        users.forEach(function (user) {
+          rows += `<tr>
+            <td>${user.name}</td>
+            <td>${user.email}</td>
+            <td>${user.age}</td>
+            <td>${user.bday}</td>
+            <td>${user.gender}</td>
+            <td>${user.phone}</td>
+            <td>${user.username}</td>
+          </tr>`;
+        });
+
+        usersTable.innerHTML = header + rows;
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Registered Users</h2>
+      <table id="usersTable" class="users-table"></table>
+      <div class="form-group">
+        <button type="button" onclick="window.location.href='register.html'" class="btn-register">
+          Back to Registration
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

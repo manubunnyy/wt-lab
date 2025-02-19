@@ -1,0 +1,147 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaeaea;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container for the entire form/page */
+  .container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+  }
+  
+  /* Title */
+  .container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Flex row for form columns */
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Left and Right Columns */
+  .left-column,
+  .right-column {
+    flex: 1 1 45%;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  
+  /* Fieldset Styling */
+  fieldset {
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    padding: 15px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Legend Styling */
+  legend {
+    font-weight: bold;
+    padding: 0 10px;
+    color: #555;
+  }
+  
+  /* Form Group Styling */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #444;
+  }
+  
+  .required {
+    color: red;
+    margin-left: 4px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 90%;
+    padding: 8px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+  }
+  
+  /* Error Message Styling */
+  .error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 4px;
+    display: block;
+  }
+  
+  /* Button Styling */
+  button {
+    background-color: #666;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #444;
+  }
+  
+  /* Extra buttons container */
+  .extra-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .extra-buttons button {
+    width: 30%;
+  }
+  
+  /* Table Styles for Display Users */
+  .users-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .users-table th,
+  .users-table td {
+    border: 1px solid #bbb;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .users-table th {
+    background-color: #ddd;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .form-row {
+      flex-direction: column;
+    }
+  
+    .left-column,
+    .right-column {
+      flex: 1 1 100%;
+    }
+  }
+  

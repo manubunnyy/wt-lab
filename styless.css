@@ -1,0 +1,171 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 60px 0 0;
+    background-color: #f9f9f9;
+}
+
+/* Header */
+.header {
+    background-color: #ccc;  /* Changed from aqua to light gray */
+    padding: 10px 0;
+    color: #222;  /* Darker text for contrast */
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    z-index: 10;
+}
+
+.header h1 {
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #ddd;  /* Changed from #f05555 to a light gray */
+    padding: 20px;
+    width: 170px;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #222;  /* Dark text */
+    font-size: 16px;
+    display: block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #ccc;  /* Slightly darker gray on hover */
+}
+
+/* Category Titles */
+.category-title {
+    cursor: pointer;
+    display: block;
+    padding: 8px;
+    background-color: #ccc;  /* Changed to a medium gray */
+    border-radius: 4px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: #222;
+}
+
+.category-title:hover {
+    background-color: #bbb;  /* Darker on hover */
+}
+
+/* Hide years by default */
+.year-list {
+    display: none;
+    padding-left: 15px;
+}
+
+/* Show years when category is clicked */
+li.active .year-list {
+    display: block;
+}
+
+/* Content */
+.content {
+    margin-left: 220px;
+    padding: 20px;
+    background-color: #fff;
+    min-height: calc(100vh - 50px);
+    overflow-y: auto;
+}
+
+/* Book Display Area */
+.book-display-area {
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Show section when targeted */
+.book-display-area:target {
+    display: grid;
+}
+
+/* Center headings */
+.book-display-area h3 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* Book Card Styles */
+.book-card {
+    padding: 15px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.book-card h4 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+}
+
+.book-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Truncate long book descriptions */
+.card-body p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 150px;
+    }
+
+    .content {
+        margin-left: 170px;
+    }
+
+    .book-display-area {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
