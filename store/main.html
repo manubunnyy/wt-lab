@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Online bookstore for AI, Data Science, and related subjects">
+    <title>Online Bookstore</title>
+    <link rel="stylesheet" href="styless.css">
+    <script defer src="scripts.js"></script>
+    <script defer src="auth.js"></script>
+    <script defer src="script.js"></script> <!-- JS for category toggle -->
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>Welcome to the Online Bookstore</h1>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" aria-label="Book Categories">
+        <ul>
+            <li><b>Categories</b></li>
+
+            <li id="aids">
+                <button class="category-title" aria-expanded="false">AI and DS</button>
+                <ul class="year-list">
+                    <li><a href="#aids1">1st Year</a></li>
+                    <li><a href="#aids2">2nd Year</a></li>
+                    <li><a href="#aids3">3rd Year</a></li>
+                    <li><a href="#aids4">4th Year</a></li>
+                </ul>
+            </li>
+
+            <li id="ds">
+                <button class="category-title" aria-expanded="false">Data Science</button>
+                <ul class="year-list">
+                    <li><a href="#ds1">1st Year</a></li>
+                    <li><a href="#ds2">2nd Year</a></li>
+                    <li><a href="#ds3">3rd Year</a></li>
+                    <li><a href="#ds4">4th Year</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content">
+        <section id="aids1" class="book-display-area">
+            <h3>AI & DS - 1st Year</h3>
+        </section>
+        <section id="aids2" class="book-display-area">
+            <h3>AI & DS - 2nd Year</h3>
+        </section>
+        <section id="aids3" class="book-display-area">
+            <h3>AI & DS - 3rd Year</h3>
+        </section>
+        <section id="aids4" class="book-display-area">
+            <h3>AI & DS - 4th Year</h3>
+        </section>
+        <section id="ds1" class="book-display-area">
+            <h3>Data Science - 1st Year</h3>
+        </section>
+        <section id="ds2" class="book-display-area">
+            <h3>Data Science - 2nd Year</h3>
+        </section>
+        <section id="ds3" class="book-display-area">
+            <h3>Data Science - 3rd Year</h3>
+        </section>
+        <section id="ds4" class="book-display-area">
+            <h3>Data Science - 4th Year</h3>
+        </section>
+    </main>
+</body>
+</html>
